@@ -1,0 +1,18 @@
+<ion-view title="TAB2">
+	<ion-content>
+		<div style="text-align: center;margin-top: 48px;">
+			<h1 style="font-size: 32px;color: green;">{{vo.delayData}}</h1>
+			<h1 style="font-size: 32px;color: brown;">{{vo.theTime}}</h1>
+		</div>
+		
+		<!-- 数据库操作按钮 -->
+		<div class="row row-wrap" style="padding: 0;margin-top: 24px;text-align: center;">
+			<div class="col-50">
+				<button class="button button-positive" style="width: 80%;" ng-click="vc.save()">保存</button>
+			</div>
+			<div class="col-50">
+				<button class="button button-positive" style="width: 80%;" ng-click="vc.search()">查询</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view title="TAB3">
+	<ion-content>
+		<!-- 日历显示 -->
+		<div>
+			<table class="tab2-table-cleander">
+				<tr class="row row-wrap">
+					<td style="width: 14.2%;">日</td>
+					<td style="width: 14.2%;">一</td>
+					<td style="width: 14.2%;">二</td>
+					<td style="width: 14.2%;">三</td>
+					<td style="width: 14.2%;">四</td>
+					<td style="width: 14.2%;">五</td>
+					<td style="width: 14.2%;">六</td>
+				</tr>
+				<tr class="row row-wrap">
+					<td style="width:14.2%;" ng-repeat="dayItem in dayList track by $index">
+						<i>{{dayItem.daycount}}</i>
+						<i style="font-size:10px">{{vc.showHoliday(dayItem)}}</i>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</ion-content>
+</ion-view>
