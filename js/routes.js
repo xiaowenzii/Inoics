@@ -16,6 +16,7 @@ angular.module('train.routes', [])
 			 ***************************************/
 			.state("tab", {
 				url: "/tab",
+				cache: true,
 				templateUrl: "templates/tabs.html",
 				controller: "tabsCtrl"
 			})
@@ -41,7 +42,7 @@ angular.module('train.routes', [])
 			})
 			.state('tab.tab3', {
 				url: '/tab3',
-				cache: true,
+				cache: false,
 				views: {
 					'tab-tab3': {
 						templateUrl: 'templates/tab3.html',
@@ -50,5 +51,11 @@ angular.module('train.routes', [])
 				}
 			})
 
+			.state("clendarDouble", {
+				url: '/clendarDouble/:startTime, :endTime',
+				cache: false,
+				templateUrl: 'templates/clendar_double.html',
+				controller: "clendarDoubleCtrl"
+			})
 		$urlRouterProvider.otherwise("/login");
 	}]);
