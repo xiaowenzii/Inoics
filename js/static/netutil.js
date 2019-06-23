@@ -170,3 +170,93 @@ var NUM_CHINESE = "一二三四五六七八九十";
 var NUM_MON = "正二三四五六七八九十冬腊";
 var NUM_WEEK = "日一二三四五六";
 var SX = "鼠牛虎兔龙蛇马羊猴鸡狗猪";
+
+var MESAGE = [{
+		headImg: 'img/812_superfast.jpg',
+		nickName: '你你你',
+		msg: '一二三四五六七八九十, 你会数嘛?'
+	},
+	{
+		headImg: 'img/812_superfast.jpg',
+		nickName: '我我我',
+		msg: '一二三四五六七八九十, 我真的会数!'
+	},
+	{
+		headImg: 'img/812_superfast.jpg',
+		nickName: '他他他',
+		msg: '一二三四五六七八九十,十九八七六五四三二一, 他还会倒着数~'
+	}
+]
+
+var CHART_RECORDS = [{
+		user: '001',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学霸一',
+		msg: '一二三四五六七八九十, 你会数嘛?'
+	},
+	{
+		user: '002',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学霸二',
+		msg: '一二三四五六七八九十, so easy!'
+	},
+	{
+		user: '003',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学神三',
+		msg: '十九八七六五四三二一, 倒着走一遍!'
+	},
+	{
+		user: '004',
+		headImg: 'img/TKZC.jpg',
+		nickName: '学渣我',
+		msg: '你们自己数着玩,我撤了'
+	}, {
+		user: '001',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学霸一',
+		msg: '一二三四五六七八九十, 你会数嘛?'
+	},
+	{
+		user: '002',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学霸二',
+		msg: '一二三四五六七八九十, so easy!'
+	},
+	{
+		user: '003',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学神三',
+		msg: '十九八七六五四三二一, 倒着走一遍!'
+	},
+	{
+		user: '004',
+		headImg: 'img/TKZC.jpg',
+		nickName: '学渣我',
+		msg: '你们自己数着玩,我撤了'
+	},
+	{
+		user: '001',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学霸一',
+		msg: '一二三四五六七八九十, 你会数嘛?'
+	},
+	{
+		user: '002',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学霸二',
+		msg: '一二三四五六七八九十, so easy!'
+	},
+	{
+		user: '003',
+		headImg: 'img/812_superfast.jpg',
+		nickName: '学神三',
+		msg: '十九八七六五四三二一, 倒着走一遍!'
+	},
+	{
+		user: '004',
+		headImg: 'img/TKZC.jpg',
+		nickName: '学渣我',
+		msg: '你们自己数着玩,我撤了'
+	}
+]

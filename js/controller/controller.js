@@ -1,5 +1,6 @@
 angular.module('train.controllers', [
-		'train.clendardouble.controllers'
+		'train.clendardouble.controllers',
+		'train.chart.controllers'
 	])
 	.controller('loginCtrl', ['$rootScope', '$scope', '$state', '$timeout', '$ionicLoading', 'ionicService', function(
 		$rootScope, $scope, $state, $timeout, $ionicLoading, ionicService, stateService) {
@@ -74,11 +75,9 @@ angular.module('train.controllers', [
 	})
 
 	.controller('tab2Ctrl', function($rootScope, $scope, $state, $ionicHistory, $interval, $timeout, $ionicLoading,
-		$location,
-		$ionicPopup, ionicService) {
+		$location, $ionicPopup, ionicService, stateService) {
 		$scope.vo = {
-			delayData: '',
-			theTime: new Date().toLocaleTimeString()
+			msgList: MESAGE
 		}
 
 		$scope.vc = {
@@ -97,18 +96,12 @@ angular.module('train.controllers', [
 				} else {
 					ionicService.toast("非移动端操作", 1000);
 				}
+			},
+			//去聊天室
+			goChartroom: function(item){
+				stateService.chartroom(JSON.stringify(item));
 			}
 		}
-
-		//$interval服务
-		$timeout(function() {
-			$scope.vo.delayData = "星期三";
-		}, 1000);
-
-		//$interval 服务
-		$interval(function() {
-			$scope.vo.theTime = new Date().toLocaleTimeString();
-		}, 1000);
 	})
 
 	.controller('tab3Ctrl', function($rootScope, $scope, $state, $ionicHistory, $ionicLoading, $ionicScrollDelegate,

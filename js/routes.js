@@ -57,5 +57,12 @@ angular.module('train.routes', [])
 				templateUrl: 'templates/clendar_double.html',
 				controller: "clendarDoubleCtrl"
 			})
+			
+			.state("chartroom", {
+				url: '/chartroom',
+				cache: false,
+				templateUrl: 'templates/chart/chartroom.html',
+				controller: "chartroomCtrl"
+			})
 		$urlRouterProvider.otherwise("/login");
 	}]);

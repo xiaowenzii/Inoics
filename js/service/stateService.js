@@ -9,6 +9,12 @@ angular.module('train.state.services', [])
 						startTime: startTime,
 						endTime: endTime
 					});
+				},
+				//跳转聊天室
+				chartroom: function(item){
+					$state.go('chartroom', {
+						item: item
+					});
 				}
 			}
 		}
