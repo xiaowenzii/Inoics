@@ -16,7 +16,25 @@ angular.module('train.controllers', [
 		$timeout) {}])
 
 	.controller('tab1Ctrl', function($rootScope, $scope, $state, $stateParams, $ionicHistory, $timeout, $ionicLoading,
-		$ionicPopup, ionicService, formatService) {
+		$ionicPopup, ionicService, formatService, stateService) {
+		$scope.vo = {
+			msgList: MESAGE
+		}
+
+		$scope.vc = {
+			//去聊天室
+			goChartroom: function(item) {
+				stateService.chartroom(JSON.stringify(item));
+			}
+		}
+
+		$scope.ready = (function() {
+			$scope.vo.moreCon = $scope.vo.moreTuition;
+		})()
+	})
+
+	.controller('tab2Ctrl', function($rootScope, $scope, $state, $ionicHistory, $interval, $timeout, $ionicLoading,
+		$location, $ionicPopup, ionicService, formatService, stateService) {
 		$scope.vo = {
 			aaa: '城市',
 			itemI: {
@@ -69,17 +87,6 @@ angular.module('train.controllers', [
 			maxtime: '2030.12.12'
 		}
 
-		$scope.ready = (function() {
-			$scope.vo.moreCon = $scope.vo.moreTuition;
-		})()
-	})
-
-	.controller('tab2Ctrl', function($rootScope, $scope, $state, $ionicHistory, $interval, $timeout, $ionicLoading,
-		$location, $ionicPopup, ionicService, stateService) {
-		$scope.vo = {
-			msgList: MESAGE
-		}
-
 		$scope.vc = {
 			//保存数据
 			save: function() {
@@ -97,11 +104,12 @@ angular.module('train.controllers', [
 					ionicService.toast("非移动端操作", 1000);
 				}
 			},
-			//去聊天室
-			goChartroom: function(item){
-				stateService.chartroom(JSON.stringify(item));
-			}
 		}
+
+
+		$scope.ready = (function() {
+			$scope.vo.moreCon = $scope.vo.moreTuition;
+		})()
 	})
 
 	.controller('tab3Ctrl', function($rootScope, $scope, $state, $ionicHistory, $ionicLoading, $ionicScrollDelegate,
@@ -120,10 +128,10 @@ angular.module('train.controllers', [
 		}
 
 		$scope.ready = (function() {
-			if($rootScope.startTime!=undefined && $rootScope.startTime!=null){
+			if ($rootScope.startTime != undefined && $rootScope.startTime != null) {
 				$scope.vo.startTime = $rootScope.startTime;
 			}
-			if($rootScope.endTime!=undefined && $rootScope.endTime!=null){
+			if ($rootScope.endTime != undefined && $rootScope.endTime != null) {
 				$scope.vo.endTime = $rootScope.endTime;
 			}
 		})()
