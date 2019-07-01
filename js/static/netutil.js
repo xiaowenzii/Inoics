@@ -192,71 +192,83 @@ var CHART_RECORDS = [{
 		user: '001',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学霸一',
-		msg: '一二三四五六七八九十, 你会数嘛?'
+		msg: '一二三四五六七八九十, 你会数嘛?',
+		msgTime: '9:11'
 	},
 	{
 		user: '002',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学霸二',
-		msg: '一二三四五六七八九十, so easy!'
+		msg: '一二三四五六七八九十, so easy!',
+		msgTime: '9:11'
 	},
 	{
 		user: '003',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学神三',
-		msg: '十九八七六五四三二一, 倒着走一遍!'
+		msg: '十九八七六五四三二一, 倒着走一遍!',
+		msgTime: '9:11'
 	},
 	{
 		user: '004',
 		headImg: 'img/TKZC.jpg',
 		nickName: '学渣我',
-		msg: '你们自己数着玩,我撤了'
+		msg: '你们自己数着玩,我撤了',
+		msgTime: '9:11'
 	}, {
 		user: '001',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学霸一',
-		msg: '一二三四五六七八九十, 你会数嘛?'
+		msg: '一二三四五六七八九十, 你会数嘛?',
+		msgTime: '9:11'
 	},
 	{
 		user: '002',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学霸二',
-		msg: '一二三四五六七八九十, so easy!'
+		msg: '一二三四五六七八九十, so easy!',
+		msgTime: '9:11'
 	},
 	{
 		user: '003',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学神三',
-		msg: '十九八七六五四三二一, 倒着走一遍!'
+		msg: '十九八七六五四三二一, 倒着走一遍!',
+		msgTime: '9:11'
 	},
 	{
 		user: '004',
 		headImg: 'img/TKZC.jpg',
 		nickName: '学渣我',
-		msg: '你们自己数着玩,我撤了'
+		msg: '你们自己数着玩,我撤了',
+		msgTime: '9:11'
 	},
 	{
 		user: '001',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学霸一',
-		msg: '一二三四五六七八九十, 你会数嘛?'
+		msg: '一二三四五六七八九十, 你会数嘛?',
+		msgTime: '9:11'
 	},
 	{
 		user: '002',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学霸二',
-		msg: '一二三四五六七八九十, so easy!'
+		msg: '一二三四五六七八九十, so easy!',
+		msgTime: '9:11'
 	},
 	{
 		user: '003',
 		headImg: 'img/812_superfast.jpg',
 		nickName: '学神三',
-		msg: '十九八七六五四三二一, 倒着走一遍!'
+		msg: '十九八七六五四三二一, 倒着走一遍!',
+		msgTime: '9:11'
 	},
 	{
 		user: '004',
 		headImg: 'img/TKZC.jpg',
 		nickName: '学渣我',
-		msg: '你们自己数着玩,我撤了'
+		msg: '你们自己数着玩,我撤了',
+		msgTime: '9:11'
 	}
 ]

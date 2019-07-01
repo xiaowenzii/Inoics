@@ -7,10 +7,11 @@
 		</div>
 	</ion-header-bar>
 	<ion-content>
-		<div id="box">
+		<div style="height: 86%;overflow: hidden;">
 			<div id="screen">
 				<div ng-repeat="item in vo.chartList">
-					<div class="other-side" ng-if="item.user!='004'">
+					<div style="width: 100%;" class="other-side" ng-if="item.user!='004'">
+						<div style="width: 100%; text-align: center;height: 24px;">{{item.msgTime}}</div>
 						<div class="header" style="float: left;">
 							<img ng-src="{{item.headImg}}" style="height: 36px;width: 36px;border-radius: 6px;" />
 						</div>
@@ -21,7 +22,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="myself" ng-if="item.user=='004'">
+					<div style="width: 100%;" class="myself" ng-if="item.user=='004'">
+						<div style="width: 100%; text-align: center;height: 24px;">{{item.msgTime}}</div>
 						<div class="header" style="float: right;">
 							<img ng-src="{{item.headImg}}" style="height: 36px;width: 36px;border-radius: 6px;" />
 						</div>
@@ -40,13 +42,13 @@
 <style type="text/css">
 	#screen {
 		margin: 6px;
-		height: 81vh;
+		height: 100%;
 		background-color: rgba(255, 255, 255, 0.5);
-		overflow: auto;
+        overflow-y: scroll;
 	}
 
 	#screen [class$="send"] {
-		width: 240px;
+		width: 60%;
 		position: relative;
 	}
 

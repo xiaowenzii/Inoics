@@ -8,8 +8,13 @@ angular.module('train.routes', [])
 			 ***************************************/
 			.state("login", {
 				url: "/login",
-				templateUrl: "login.html",
-				controller: "loginCtrl"
+				cache: true,
+				views: {
+					'main-view': {
+						templateUrl: "login.html",
+						controller: "loginCtrl"
+					}
+				}
 			})
 			/****************************************
 			 * 主界面
@@ -17,8 +22,12 @@ angular.module('train.routes', [])
 			.state("tab", {
 				url: "/tab",
 				cache: true,
-				templateUrl: "templates/tabs.html",
-				controller: "tabsCtrl"
+				views: {
+					'main-view': {
+						templateUrl: "templates/tabs.html",
+						controller: "tabsCtrl"
+					}
+				}
 			})
 			.state('tab.tab1', {
 				url: '/tab1',
@@ -54,15 +63,23 @@ angular.module('train.routes', [])
 			.state("clendarDouble", {
 				url: '/clendarDouble/:startTime, :endTime',
 				cache: false,
-				templateUrl: 'templates/clendar_double.html',
-				controller: "clendarDoubleCtrl"
+				views: {
+					'main-view': {
+						templateUrl: "templates/clendar_double.html",
+						controller: "clendarDoubleCtrl"
+					}
+				}
 			})
 			
 			.state("chartroom", {
 				url: '/chartroom',
 				cache: false,
-				templateUrl: 'templates/chart/chartroom.html',
-				controller: "chartroomCtrl"
+				views: {
+					'main-view': {
+						templateUrl: "templates/chart/chartroom.html",
+						controller: "chartroomCtrl"
+					}
+				}
 			})
 		$urlRouterProvider.otherwise("/login");
 	}]);
