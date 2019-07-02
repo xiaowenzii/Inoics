@@ -34,7 +34,7 @@ angular.module('train.controllers', [
 	})
 
 	.controller('tab2Ctrl', function($rootScope, $scope, $state, $ionicHistory, $interval, $timeout, $ionicLoading,
-		$location, $ionicPopup, ionicService, formatService, stateService) {
+		$location, $ionicPopup, ionicService, formatService, stateService, cordovaService) {
 		$scope.vo = {
 			aaa: '城市',
 			itemI: {
