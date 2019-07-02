@@ -71,7 +71,7 @@ angular.module('train.cordova.services', [])
 			 * operateType: 操作类型:增'save', 删'delete', 改'update', 查'search'
 			 */
 			sqlOperate: function(operateType){
-				window.parent.navigator.SqlOperate.sqlOperate(operateType, '', function(data) {
+				SqlOperate.SqlOperate(operateType, '', function(data) {
 					console.log("onSuccess() data : " + data);
 				}, function(msg) {
 					console.log("onError() msg : " + msg);
