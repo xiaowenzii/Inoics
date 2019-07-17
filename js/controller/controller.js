@@ -113,11 +113,13 @@ angular.module('train.controllers', [
 	})
 
 	.controller('tab3Ctrl', function($rootScope, $scope, $state, $ionicHistory, $ionicLoading, $ionicScrollDelegate,
-		$ionicPopup, $timeout, formatService, stateService, cordovaService) {
+		$ionicPopup, $timeout, formatService, stateService, cordovaService, ionicService) {
 		$scope.vo = {
 			maxtime: '2030.12.12',
 			startTime: formatService.formatDate(new Date()),
-			endTime: formatService.formatDate(new Date())
+			endTime: formatService.formatDate(new Date()),
+			map: new BMap.Map("container"),
+			geolocation: Navigator.geolocation,
 		}
 
 		$scope.vc = {
@@ -126,7 +128,7 @@ angular.module('train.controllers', [
 				stateService.chooseTime($scope.vo.startTime, $scope.vo.endTime);
 			},
 			//身份证正面识别
-			front: function(){
+			front: function() {
 				if (iscordova) {
 					cordovaService.idcardScan("front");
 				} else {
@@ -134,7 +136,7 @@ angular.module('train.controllers', [
 				}
 			},
 			//身份证反面识别
-			back: function(){
+			back: function() {
 				if (iscordova) {
 					cordovaService.idcardScan("back");
 				} else {
@@ -144,6 +146,22 @@ angular.module('train.controllers', [
 		}
 
 		$scope.ready = (function() {
+			$scope.vo.map.centerAndZoom(new BMap.Point(116.404, 39.915), 20);
+			$scope.vo.map.enableScrollWheelZoom(true);
+			$scope.vo.map.enableContinuousZoom(true);
+
+			new BMap.Geolocation().getCurrentPosition(function(r) {
+				if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+					var mk = new BMap.Marker(r.point);
+					$scope.vo.map.addOverlay(mk);
+					$scope.vo.map.panTo(r.point);
+				} else {
+					ionicService.toast('定位失败', 1000);
+				}
+			}, {
+				enableHighAccuracy: true
+			})
+
 			if ($rootScope.startTime != undefined && $rootScope.startTime != null) {
 				$scope.vo.startTime = $rootScope.startTime;
 			}
